@@ -9,7 +9,7 @@ resource "aws_instance" "Frontend" {
     ami = lookup(var.AMIS, var.AWS_REGION)
     instance_type="t2.micro"
     key_name = aws
-}
+
 
 tags = {
     Name = "Custom_Instance"
@@ -34,4 +34,4 @@ provisioner "remote-exec" {
     user        = var.INSTANCE_USERNAME
     private_key = file(var.PATH_TO_PRIVATE_KEY)
   }
-
+}
