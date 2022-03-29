@@ -4,6 +4,9 @@ variable "AWS_ACCESS_KEY" {
 }
 
 variable "AWS_SECRET_KEY" {}
+variable "INSTANCE_USERNAME" {
+    default = "ec2-user"
+} 
 variable "AWS_REGION" {
     default = "us-east-1"
 }
