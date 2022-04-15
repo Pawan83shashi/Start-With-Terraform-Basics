@@ -29,6 +29,10 @@ resource "aws_instance" "Frontend" {
     ]
   }
 
+  provisioner "local-exec" {
+    command = "echo the server's IP address is ${self.private_ip}"
+  }
+
  connection {
     host        = coalesce(self.public_ip, self.private_ip)
     type        = "ssh"
