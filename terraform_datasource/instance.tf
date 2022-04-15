@@ -4,7 +4,7 @@ data "aws_ami" "latest-ami" {
   owner = ["amazon"]
   filter {
     name = "name"
-    values = "amzn2-ami-hvm-2*"
+    values = "/aws/service/ami-amazon-linux-latest*"
   }
 
   filter {
