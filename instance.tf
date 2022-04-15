@@ -12,7 +12,8 @@ resource "aws_instance" "Frontend" {
 
 
   tags = {
-    Name = "Custom_Instance"
+    Name = "Frontend_Server"
+    Project = "BMT"
   }
 
   provisioner "file" {
