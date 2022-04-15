@@ -21,7 +21,7 @@ data "aws_ami" "latest-ami" {
 
 # Create Fronted Server
 resource "aws_instance" "Frontend" {
-    ami = data.aws_ami.latest-ami.id
+    amis = data.aws_ami.latest-ami.id
     instance_type="t2.micro"
     availability_zone = data.aws_availability_zones.available.names[1]
 
