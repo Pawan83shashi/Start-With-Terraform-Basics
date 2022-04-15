@@ -1,14 +1,20 @@
 data "aws_availability_zones" "available" {}
 data "aws_ami" "latest-ami" {
   most_recent = true
-  owners = ["amazon"]
+  owners = ["self"]
+   
   filter {
-    name = "name"
-    values = "amzn2-ami-hvm-2.0*"
+    name   = "name"
+    values = ["myami-*"]
   }
 
   filter {
-    name = "virtualization-type"
+    name   = "root-device-type"
+    values = ["ebs"]
+  }
+
+  filter {
+    name   = "virtualization-type"
     values = ["hvm"]
   }
 }
