@@ -4,23 +4,23 @@ resource "aws_key_pair" "levelup_key" {
     public_key = file(var.PATH_TO_PUBLIC_KEY)
 }
 
-
+# Create Fronted Server
 resource "aws_instance" "Frontend" {
     ami = lookup(var.AMIS, var.AWS_REGION)
     instance_type="t2.micro"
     key_name = aws_key_pair.levelup_key.key_name
 
 
-tags = {
+  tags = {
     Name = "Custom_Instance"
-}
+  }
 
-provisioner "file" {
+  provisioner "file" {
       source = "installNginx.sh"
       destination = "/tmp/installNginx.sh"
   }
 
-provisioner "remote-exec" {
+  provisioner "remote-exec" {
     inline = [
       "chmod +x /tmp/installNginx.sh",
       "sudo sed -i -e 's/\r$//' /tmp/installNginx.sh",  # Remove the spurious CR characters.

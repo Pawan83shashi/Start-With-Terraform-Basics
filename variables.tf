@@ -4,18 +4,22 @@ variable "AWS_ACCESS_KEY" {
 }
 
 variable "AWS_SECRET_KEY" {}
+
 variable "INSTANCE_USERNAME" {
     default = "ec2-user"
 } 
+
 variable "AWS_REGION" {
     default = "us-east-1"
 }
 
+# Security Group
 variable "Security_Group" {
     type = list
     default = ["sg-24076", "sg-12354" ]
 }
 
+#List of AMIS
 variable "AMIS" {
     type = map
     default = {
@@ -25,14 +29,17 @@ variable "AMIS" {
     }
 }
 
+#Public key
 variable "PATH_TO_PUBLIC_KEY" {
     default = "levelup_key.pub"
 }
 
+#Private key
 variable "PATH_TO_PRIVATE_KEY" {
     default = "levelup_key"
 }
 
+#I User Name
 variable "INSTANCE_USER" { 
     default = "ec2-user"
 }
