@@ -16,10 +16,10 @@ resource "aws_instance" "Frontend" {
     Environment = "DEV"
   }
 
+
+
+}
   output "public_ip" {
     value = aws_instance.Frontend.public_ip
   }
-
-}
-
 
