@@ -1,11 +1,12 @@
 data "aws_availability_zones" "available" {}
+
 data "aws_ami" "latest-ami" {
   most_recent = true
   owners = ["self"]
    
   filter {
     name   = "name"
-    values = ["myami-*"]
+    values = ["/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2*"]
   }
 
   filter {
