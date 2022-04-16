@@ -19,6 +19,8 @@ data "aws_ami" "latest-ami" {
     values = ["hvm"]
   }
 }
+  
+
 
 # Create Fronted Server
 resource "aws_instance" "Frontend" {
