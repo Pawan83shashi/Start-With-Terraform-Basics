@@ -16,7 +16,8 @@ resource "aws_instance" "Frontend" {
     Environment = "DEV"
   }
 
+  }
+
   output "public_id" {
     value = aws_instance.Frontend.public_id
   }
-}
