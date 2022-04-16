@@ -7,7 +7,7 @@ resource "aws_instance" "Frontend" {
     availability_zone = data.aws_availability_zones.available.names[1]
   
   provisioner "local-exec" {
-    command = "echo  aws_instance.Frontend.private_ip >>my_private_ips.txt"
+    command = "echo aws_instance.Frontend.private_ip >> my_private_ips.txt"
   }
 
   tags = {
@@ -16,10 +16,10 @@ resource "aws_instance" "Frontend" {
     Environment = "DEV"
   }
 
-  
+  output "public_ip" {
+    value = aws_instance.Frontend.public_ip
+  }
 
 }
 
-output "public_ip" {
-    value = aws_instance.Frontend.public_ip
-  }
+
