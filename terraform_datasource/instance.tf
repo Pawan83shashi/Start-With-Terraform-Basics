@@ -5,6 +5,11 @@ data "aws_ami" "latest" {
   owners = ["amazon"]
 
       filter {
+        name = "name"
+        values = ["/aws/service/ami-amazon-linux-latest"]
+      }
+      
+      filter {
         name   = "root-device-type"
         values = ["ebs"]
       }
