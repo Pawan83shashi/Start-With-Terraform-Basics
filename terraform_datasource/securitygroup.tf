@@ -4,9 +4,10 @@ data "aws_ip_ranges" "us_east_ip_range" {
 }
 
 resource "aws_security_group" "sg_custom_us_east" {
-    name = "sg-custom_us_east"
+    name = "sg_custom_us_east"
 
     ingress {
+        description = "TLS from VPC"
         from_port = "443"
         to_port   = "443"
         protocol  = "tcp"
@@ -14,6 +15,7 @@ resource "aws_security_group" "sg_custom_us_east" {
     }
 
     tags = {
+        Name = "allow_tls"
         CreateDate = data.aws_ip_ranges.us_east_ip_range.create_date
         SyncToken  =data.aws_ip_ranges.us_east_ip_range.sync_token
     }
