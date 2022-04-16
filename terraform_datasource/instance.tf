@@ -4,11 +4,7 @@ data "aws_ami" "latest" {
   most_recent = true
   owners = ["amazon"]
    
-  filter {
-    name   = "name"
-    values = ["/aws/service/ami-amazon-linux-latest/amzn*"]
-  }
-
+  
 }
   
 
