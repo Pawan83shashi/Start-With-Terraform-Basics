@@ -1,8 +1,8 @@
 data "aws_availability_zones" "available" {}
 
-data "aws_ami" "latest" {
+data "aws_ami_ids" "latest" {
   most_recent = true
-  owners = ["self amazon"]
+  owners = ["self"]
    
   filter {
     name   = "name"
