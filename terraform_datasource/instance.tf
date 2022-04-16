@@ -4,8 +4,10 @@ data "aws_ami" "latest" {
   most_recent = true
   owners = ["amazon"]
    
-  
-}
+  image=aws ssm get-parameters-by-path --path /aws/service/ami-amazon-linux-latest --query "Parameters[].Value"
+
+  }
+
   
 
 
