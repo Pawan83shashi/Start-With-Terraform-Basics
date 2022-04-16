@@ -9,15 +9,6 @@ data "aws_ami" "latest" {
     values = ["/aws/service/ami-amazon-linux-latest/amzn*"]
   }
 
-  filter {
-    name   = "root-device-type"
-    values = ["ebs"]
-  }
-
-  filter {
-    name   = "virtualization-type"
-    values = ["hvm"]
-  }
 }
   
 
