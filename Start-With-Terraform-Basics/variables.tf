@@ -31,12 +31,12 @@ variable "AMIS" {
 
 #Public key
 variable "PATH_TO_PUBLIC_KEY" {
-    default = "levelup_key.pub"
+    default = "newlevelup_key.pub"
 }
 
 #Private key
 variable "PATH_TO_PRIVATE_KEY" {
-    default = "levelup_key"
+    default = "newlevelup_key"
 }
 
 #I User Name
