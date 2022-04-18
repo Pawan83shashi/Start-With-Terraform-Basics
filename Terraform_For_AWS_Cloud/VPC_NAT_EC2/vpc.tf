@@ -1,7 +1,7 @@
 # Create AWs VPC
 resource "aws_vpc" "levelup_vpc" {
     cidr_block = "10.0.0.0/16"
-    instance tenancy = "default"
+    instance_tenancy = "default"
     enable_dns_support = "true"
     enable_dns_hostname = "true"
     enable_classiclink = "false"
