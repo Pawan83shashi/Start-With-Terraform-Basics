@@ -13,12 +13,6 @@ variable "AWS_REGION" {
     default = "us-east-1"
 }
 
-# Security Group
-variable "Security_Group" {
-    type = list
-    default = ["sg-24076", "sg-12354" ]
-}
-
 #List of AMIS
 variable "AMIS" {
     type = map
