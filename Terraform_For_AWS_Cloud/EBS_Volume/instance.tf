@@ -29,7 +29,7 @@ resource "aws_ebs_volume" "ebs-volume-1" {
   tags = {
     Name = "Secondary Volume Disk"
   }
-
+}
   # Attach EBS Volumme with AWS Instance
 
   resource "aws_volume_attachment" "ebs-volume-1-attachment" {
