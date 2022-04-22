@@ -10,7 +10,7 @@ variable "INSTANCE_USERNAME" {
 } 
 
 variable "AWS_REGION" {
-    default = "us-east-1a"
+    default = "us-east-1"
 }
 
 #List of AMIS
