@@ -22,7 +22,7 @@ resource "aws_instance" "Frontend-EBS" {
 resource "aws_ebs_volume" "ebs-volume-1" {
   availability_zone = "us-west-1a"
   size              = 20
-  type              = gp2
+  type              = "gp2"
 
   tags = {
     Name = "Secondary Volume Disk"
