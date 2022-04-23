@@ -20,7 +20,5 @@ resource "aws_instance" "Frontend-EBS" {
   }
 }
 
-output "public_key" {
-  value = aws_instance.Frontend-EBS.public_key
-}
+
 
