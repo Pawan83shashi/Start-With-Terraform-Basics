@@ -10,7 +10,7 @@ resource "aws_instance" "Frontend-EBS" {
     instance_type="t2.micro"
     key_name = aws_key_pair.newlevelup_key.key_name
     availability_zone = "us-east-1a"
-    user_date = "installapache.sh"
+    user_data = "installapache.sh"
     
   tags = {
     Name = "Frontend_Server"
