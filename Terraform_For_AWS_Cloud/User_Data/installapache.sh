@@ -1,6 +1,6 @@
-#!/bin/bash
-sudo yum update
-sudo install -y apache2
-sudo systemctl start apache2
-sudo systemctl enable apache2
-echo "<h1> Deployment through Terraform </h1>" | sudo tee /var/www/html/index.html
+#! /bin/bash
+apt-get update
+apt-get install -y apache2
+systemctl start apache2
+systemctl enable apache2
+echo "<h1>Deployed Machine via Terraform</h1>" | sudo tee /var/www/html/index.html
