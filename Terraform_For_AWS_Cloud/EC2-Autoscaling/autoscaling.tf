@@ -11,7 +11,7 @@ resource "aws_launch_configuration" "levelup-launchconfig" {
 resource "aws_autoscalling_group" "levelup-autoscaling" {
   name = "levelup-autoscalling"
   vpc_zone_identifier = ["us-east-1a"]
-  launch_configuration = aws_launch_configuration.levelup-launchconfig.name)
+  launch_configuration = aws_launch_configuration.levelup-launchconfig.name
   min_size = 1
   max_size = 2
   health_check_grace_period = 200
