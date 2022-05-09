@@ -25,12 +25,12 @@ variable "AMIS" {
 
 #Public key
 variable "PATH_TO_PUBLIC_KEY" {
-    default = "/opt/Terraform_Code/Terraform_code/Start-With-Terraform-Basics/newlevelup_key.pub"
+    default = "/mydata/Terraform_Code/Terraform_code/Terraform_For_AWS_Cloud/EC2-Autoscaling/levelup_key.pub"
 }
 
 #Private key
 variable "PATH_TO_PRIVATE_KEY" {
-    default = "/opt/Terraform_Code/Terraform_code/Start-With-Terraform-Basics/newlevelup_key"
+    default = "/mydata/Terraform_Code/Terraform_code/Terraform_For_AWS_Cloud/EC2-Autoscaling/levelup_key"
 }
 
 #I User Name
