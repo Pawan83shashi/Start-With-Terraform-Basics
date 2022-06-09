@@ -3,6 +3,7 @@ resource "aws_launch_configuration" "levelup-launchconfig" {
   name_prefix     = "levelup-launchconfig"
   image_id        = lookup(var.AMIS, var.AWS_REGION)
   instance_type   = "t2.micro"
+  associate_public_ip_address = true
   key_name        = aws_key_pair.levelup_key_autoscaling.key_name
 }
 
