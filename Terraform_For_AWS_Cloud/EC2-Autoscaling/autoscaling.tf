@@ -70,7 +70,7 @@ resource "aws_autoscaling_policy" "levelup-cpu-policy-scaledown" {
   policy_type            = "SimpleScaling"
 }
 
-#Auto descaling cloud watch 
+#Auto descaling cloud watch definitions
 resource "aws_cloudwatch_metric_alarm" "levelup-cpu-alarm-scaledown" {
   alarm_name          = "levelup-cpu-alarm-scaledown"
   alarm_description   = "Alarm once CPU Uses Decrease"
