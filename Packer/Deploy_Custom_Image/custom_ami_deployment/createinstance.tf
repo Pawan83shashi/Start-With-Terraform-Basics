@@ -13,8 +13,8 @@ provider "aws" {
 }
 
 #Resource key pair
-resource "aws_key_pair" "levelup_key" {
-  key_name      = "levelup_key"
+resource "aws_key_pair" "levelup_key_packer" {
+  key_name      = "levelup_key_packer"
   public_key    = file(var.public_key_path)
 }
 
