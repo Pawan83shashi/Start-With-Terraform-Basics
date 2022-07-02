@@ -1,7 +1,7 @@
 # Create Instance uisng Custom VPC
 
 module "develop-vpc" {
-    soruce = "../modules/vpc"
+    source = "../modules/vpc"
     ENVIRONMENT = var.ENVIRONMENT
     AWS_REGION = var.AWS_REGION
 }
