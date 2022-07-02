@@ -9,7 +9,7 @@ module "develop-vpc" {
 
 provider "aws" {
   region = var.AWS_REGION
-  shared_credentials_file ="~/.aws/credentials"
+  shared_credentials_file ="/home/ec2-user/.aws/credentials"
 }
 
 #Resource key pair
