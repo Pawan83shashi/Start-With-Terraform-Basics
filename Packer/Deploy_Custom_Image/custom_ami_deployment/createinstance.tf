@@ -1,13 +1,14 @@
 # Create Instance uisng Custom VPC
 
 module "develop-vpc" {
-    source = "../modules/vpc"
+    source      = "../modules/vpc"
+
     ENVIRONMENT = var.ENVIRONMENT
-    AWS_REGION = var.AWS_REGION
+    AWS_REGION  = var.AWS_REGION
 }
 
 provider "aws" {
-    region = var.AWS_REGION
+  region = var.AWS_REGION
 }
 
 # Resourcce key pair
