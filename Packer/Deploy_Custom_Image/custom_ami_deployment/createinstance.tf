@@ -12,11 +12,12 @@ provider "aws" {
   shared_credentials_file ="/home/ec2-user/.aws/credentials"
 }
 
-# Resourcce key pair
+#Resource key pair
 resource "aws_key_pair" "levelup_key" {
-    key_name = "levelup_key"
-    public_key = file(var.public_key_path)
+  key_name      = "levelup_key"
+  public_key    = file(var.public_key_path)
 }
+
 
 #Secutiry Group for Instances
 resource "aws_security_group" "allow-ssh" {
