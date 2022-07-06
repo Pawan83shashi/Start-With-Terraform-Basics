@@ -25,12 +25,12 @@ variable "AMIS" {
 
 #Public key
 variable "PATH_TO_PUBLIC_KEY" {
-    default = "/opt/Terraform_Code/Terraform_code/Start-With-Terraform-Basics/newlevelup_key.pub"
+    default = "/home/ec2-user/.ssh/newlevelup_key.pub"
 }
 
 #Private key
 variable "PATH_TO_PRIVATE_KEY" {
-    default = "/opt/Terraform_Code/Terraform_code/Start-With-Terraform-Basics/newlevelup_key"
+    default = "/home/ec2-user/.ssh/newlevelup_key"
 }
 
 #I User Name
