@@ -25,12 +25,12 @@ variable "AMIS" {
 
 #Public key
 variable "PATH_TO_PUBLIC_KEY" {
-    default = "/home/ec2-user/.ssh/newlevelup_key.pub"
+    default = "/home/ec2-user/.ssh/levelup_key.pub"
 }
 
 #Private key
 variable "PATH_TO_PRIVATE_KEY" {
-    default = "/home/ec2-user/.ssh/newlevelup_key"
+    default = "/home/ec2-user/.ssh/levelup_key"
 }
 
 #I User Name
