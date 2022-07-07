@@ -1,8 +1,16 @@
+module "develop-vpc" {
+    source      = "../AWS_RDS"
+
+    ENVIRONMENT = var.ENVIRONMENT
+    AWS_REGION  = var.AWS_REGION
+}
+
+
 # RDS Resources
 resource "aws_db_subnet_group" "mariadb-subnets" {
     name = "mariadb-subnets"
     description = "Amazon RDS subnet group"
-    subnet_ids = [aws_subnet.levelupvpc-private-1.id, aws_subnet.levelupvpc-private-2.id] 
+    subnet_ids = [module.develop.vpc.aws_subnet.levelupvpc-private-1.id, module.develop.vpc.aws_subnet.levelupvpc-private-2.id] 
 }
 
 # RDS Parameters
