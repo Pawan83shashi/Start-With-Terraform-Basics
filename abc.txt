@@ -1,0 +1,13 @@
+# How to connect DB
+After DB & instance created install mysql client on new instance
+yum install mysql
+mysql --version
+mysql -u database_user -p -h host_name or Ip-address 
+
+
+
+
+
+
+# kpQcC1iFtbCP+YxgPlHwTvDKlel+kJTg7Ynwn65D
+-
