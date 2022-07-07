@@ -1,7 +1,7 @@
 module "develop-vpc" {
     source      = "../AWS_RDS"
 
-    ENVIRONMENT = var.ENVIRONMENT
+    AWS_SECRET_KEY = var.AWS_SECRET_KEY
     AWS_REGION  = var.AWS_REGION
 }
 
