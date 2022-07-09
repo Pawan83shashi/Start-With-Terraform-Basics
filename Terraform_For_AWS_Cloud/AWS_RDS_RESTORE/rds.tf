@@ -1,3 +1,8 @@
+module "backup-rds" {
+  source = "../AWS_RDS"
+  ENVIRONMENT = var.ENVIRONMENT
+  AWS_REGION  = var.AWS_REGION
+}
 
 # Get latest snapshot from  levelup-mariadb  DB
 data "aws_db_snapshot" "db_snapshot" {
@@ -17,7 +22,8 @@ resource "aws_db_instance" "levelup-mariadb-backup" {
   backup_retention_period = 30                                         # how long you’re going to keep your backups
   availability_zone       = "us-east-1a" # prefered AZ
   skip_final_snapshot     = true                                     # skip final snapshot when doing terraform destroy
-  
+  parameter_group_id      = module.backup-rds.aws_db_parameter_group.id
+  parameter_group_name    = module.backup-rds.levelup-mariadb-parameters.name
   
   tags = {
     Name = "levelup-mariadb-backup"
