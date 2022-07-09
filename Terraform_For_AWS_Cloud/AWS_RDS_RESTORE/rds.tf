@@ -6,6 +6,7 @@ data "aws_db_snapshot" "db_snapshot" {
 
 #RDS Instance properties
 resource "aws_db_instance" "levelup-mariadb-backup" {
+  instance_class          = "db.t2.micro"
   identifier              = "mariadb-backup"
   db_name                 = "mariadb"
   username                = "root"           # username
