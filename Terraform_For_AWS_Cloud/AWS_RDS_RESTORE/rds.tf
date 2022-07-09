@@ -19,7 +19,6 @@ resource "aws_db_instance" "levelup-mariadb-backup" {
   availability_zone       = "us-east-1a" # prefered AZ
   skip_final_snapshot     = true                                     # skip final snapshot when doing terraform destroy
   vpc_security_group_id   = "sg-07b7a3ae8676bfd14"
-  availability_zone       = "us-east-1" # prefered AZ
   parameter_group_name    = "levelup-mariadb-parameters"
   
   tags = {
