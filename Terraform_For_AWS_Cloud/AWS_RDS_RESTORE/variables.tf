@@ -3,7 +3,10 @@ variable "AWS_ACCESS_KEY" {
     default = "AKIA2FZ5DXPD3EA6O4VQ"
 }
 
-variable "AWS_SECRET_KEY" {}
+variable "AWS_SECRET_KEY" {
+    type = string
+    default = "kpQcC1iFtbCP+YxgPlHwTvDKlel+kJTg7Ynwn65D"
+}
 
 variable "INSTANCE_USERNAME" {
     default = "ec2-user"
