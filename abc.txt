@@ -9,5 +9,5 @@ mysql -u database_user -p -h host_name or Ip-address
 
 
 
-# kpQcC1iFtbCP+YxgPlHwTvDKlel+kJTg7Ynwn65D
+
 -
