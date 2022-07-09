@@ -1,7 +1,6 @@
 module "backup-rds" {
   source = "../AWS_RDS"
-  ENVIRONMENT = var.ENVIRONMENT
-  AWS_REGION  = var.AWS_REGION
+  
 }
 
 # Get latest snapshot from  levelup-mariadb  DB
