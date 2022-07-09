@@ -12,7 +12,6 @@ resource "aws_db_instance" "levelup-mariadb-backup" {
   password                = "mariadb141"     # password
   snapshot_identifier     = "${data.aws_db_snapshot.db_snapshot.id}"
   multi_az                = "false"            # set to true to have high availability: 2 instances synchronized with each other
-  vpc_security_group_ids  = "sg-0a6e8eef800252ecf"
   storage_type            = "gp2"
   backup_retention_period = 30                                         # how long you’re going to keep your backups
   availability_zone       = "us-east-1a" # prefered AZ
