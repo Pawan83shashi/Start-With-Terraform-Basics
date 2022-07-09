@@ -1,6 +1,6 @@
 module "backup-rds" {
   source = "../AWS_RDS"
-  
+  AWS_SECRET_KEY = var.AWS_SECRET_KEY
 }
 
 # Get latest snapshot from  levelup-mariadb  DB
