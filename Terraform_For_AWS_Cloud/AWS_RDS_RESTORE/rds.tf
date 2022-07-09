@@ -8,7 +8,7 @@ data "aws_db_snapshot" "db_snapshot" {
 resource "aws_db_instance" "levelup-mariadb-backup" {
   instance_class          = "db.t2.micro"
   identifier              = "mariadb-backup"
-  db_name                 = "mariadb"
+  db_name                 = "mariadb-backup"
   username                = "root"           # username
   password                = "mariadb141"     # password
   snapshot_identifier     = "${data.aws_db_snapshot.db_snapshot.id}"
